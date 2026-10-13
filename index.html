@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            color: #222;
+        }
+
+        header {
+            background: #183b70;
+            color: white;
+            padding: 22px;
+            text-align: center;
+        }
+
+        nav {
+            background: #24528f;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 15px;
+        }
+
+        .profile, .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000012;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .card h3 {
+            color: #24528f;
+        }
+
+        button {
+            background: #24528f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 16px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 16px;
+            background: #183b70;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            main {
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Student Dashboard</h1>
+        <p>Academic Information Portal</p>
+    </header>
+
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#academics">Academics</a>
+        <a href="#announcements">Announcements</a>
+    </nav>
+
+    <main>
+        <section class="profile" id="profile">
+            <h2>Welcome, Shanmugavel S</h2>
+            <p>Register Number: 111525204095</p>
+            <p>Department: Information Technology</p>
+        </section>
+
+        <section id="academics">
+            <h2>Academic Overview</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Courses</h3>
+                    <p>View your course information.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Attendance</h3>
+                    <p>Check your attendance details.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Assignments</h3>
+                    <p>Review assignment information.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Timetable</h3>
+                    <p>View your class schedule.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card" id="announcements">
+            <h2>Announcements</h2>
+            <p id="notice">Welcome to the Student Dashboard.</p>
+            <button onclick="showNotice()">
+                View Message
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student Dashboard Project</p>
+    </footer>
+
+    <script>
+        function showNotice() {
+            document.getElementById("notice").textContent =
+                "Please check your college announcements regularly.";
+        }
+    </script>
+</body>
+</html>
